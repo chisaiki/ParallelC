@@ -1,0 +1,11 @@
+ To run program mpidemo_00: mpirun  -np 4  mpidemo_00
+ **-np tells mpi that is how many processors we want to use, in this case its 4
+ 
+ 
+ /* retrieve number of tasks to run into numtasks */
+    MPI_Comm_size(MPI_COMM_WORLD,&numtasks);
+
+    This is taking the number of processors the user inputed to use, and turning that into the 
+    number of tasks we want to execute.
+            We're using &numtasks, because we want MPI to be able to directly change the value in the address
+            
